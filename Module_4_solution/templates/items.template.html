@@ -1,0 +1,10 @@
+<div>
+	<br><br>
+	<h3>Category Items</h3>
+	<table>
+		<tr ng-repeat="item in $ctrl.category.data.menu_items">
+			<td>{{ item.short_name }}</td>
+			<td>{{ item.name }}</td>
+		</tr>
+	</table>
+</div>

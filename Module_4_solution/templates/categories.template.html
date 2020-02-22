@@ -1,0 +1,8 @@
+	<h3>Categories</h3>
+	<table>
+	<tr ng-repeat="category in $ctrl.categories.data">
+		<td>{{ category.short_name }}</td>
+		<td>{{ category.name }}</td>
+		<td><button ui-sref="view1.view2({short_name: category.short_name})">Show Me Details</button></td>
+	</tr>
+	</table>

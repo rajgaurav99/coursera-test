@@ -22,7 +22,7 @@
     </div>
     <p><br><br></p>
     <!-- found-items should be implemented as a component -->
-    <found-items array="ctrl.found" on-remove="ctrl.remove(myIndex)"></found-items>
+    <found-items items="ctrl.found" on-remove="ctrl.remove(myIndex)"></found-items>
     <div ng-if="ctrl.found != 'undefined' && ctrl.found.length < 1"><h3>Nothing Found!!</h3></div>
   </div>
 

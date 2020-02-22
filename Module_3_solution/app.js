@@ -13,7 +13,7 @@
             templateUrl: 'foundItems.html',
             scope: {
 				          remove: '&onRemove',
-				          array: '<array'
+				          array: '<items'
 			             }
         };
     return ddo;
