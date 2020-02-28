@@ -1,0 +1,38 @@
+<center>
+<div ng-show="userdata.len">
+  <table>
+    <tr>
+      <td>First name: </td>
+      <td>{{ userdata.userinfo.fname }}</td>
+      <td rowspan="6">
+        <img class="item-img" width="250" height="150"
+    				ng-src="{{userdata.ApiPath}}/images/{{userdata.userinfo.favMenuItem.short_name}}.jpg">
+      </td>
+    </tr>
+    <tr>
+      <td>Last Name: </td>
+      <td>{{ userdata.userinfo.lname }}</td>
+    </tr>
+    <tr>
+      <td>Email Address: </td>
+      <td>{{ userdata.userinfo.email }}</td>
+    </tr>
+		<tr>
+      <td>Phone Number:</td>
+      <td>{{ userdata.userinfo.phone }}</td>
+    </tr>
+    <tr>
+      <td>Favorite Menu Item: </td>
+      <td>{{ userdata.userinfo.favMenuItem.name }}</td>
+    </tr>
+		<tr>
+      <td>Description: </td>
+      <td>{{ userdata.userinfo.favMenuItem.description }}</td>
+    </tr>
+</table>
+
+</div>
+<span ng-hide="userdata.len">
+  Not Signed Up Yet. <a ui-sref="public.signup">Sign up Now!</a>
+</span>
+</center>
