@@ -3,11 +3,11 @@
 	<table>
 		<tr>
 			<td>First Name: </td>
-			<td><input type="text" style="color:black;" ng-model="signup.fName" name="fname" minlength="4" required></td>
+			<td><input type="text" style="color:black;" ng-model="signup.fName" pattern="^[a-zA-Z]*$" name="fname" minlength="4" required></td>
 		</tr>
 		<tr>
 			<td>Last Name: </td>
-			<td><input type="text" style="color:black;" ng-model="signup.lName" name="lname" minlength="2" required></td>
+			<td><input type="text" style="color:black;" ng-model="signup.lName" pattern="^[ a-zA-Z\.]*$" name="lname" minlength="2" required></td>
 		</tr>
 		<tr>
 			<td>Email Address: </td>
@@ -24,7 +24,7 @@
 	</table>
 		<span ng-if="signup.serverError">No such menu number exists</span><br><br>
 		<button ng-disabled="signupForm.$invalid" style="color:black;" ng-click="signup.submit()">Sign Up!</button><br>
-		<span ng-if="signupForm.fname.$error.required && signupForm.fname.$touched">Invalid Details!</span>
+		<span ng-if="(signupForm.fname.$touched || signupForm.lname.$touched || signupForm.email.$touched || signupForm.phoneNum.$touched || signupForm.menuNum.$touched) && signupForm.$invalid">Invalid Details!</span>
 		<span ng-if="signup.flag === 1">Your information has been saved</span>
 </form>
 </center>
